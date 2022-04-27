@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    >
+    <TextView
+        android:id="@+id/tv_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="True random number generator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/et_minimum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="50dp"
+        android:hint="Minimum"
+        app:layout_constraintTop_toBottomOf="@id/tv_titre"/>
+
+    <EditText
+        android:id="@+id/et_maximum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/et_minimum"
+        android:hint="Maximum"
+        />
+
+    <Button
+        android:id="@+id/btn_generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GENERATE"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_maximum"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_titre_resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résultat : "
+        app:layout_constraintTop_toBottomOf="@id/btn_generate"
+        android:labelFor="@id/btn_generate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_rendu_resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        app:layout_constraintTop_toBottomOf="@id/tv_titre_resultat"
+        android:labelFor="@id/btn_generate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
