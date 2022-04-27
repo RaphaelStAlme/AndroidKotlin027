@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="25dp"
+    >
+
+<TextView
+    android:id="@+id/tv_titre"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="The questionnaire"
+    android:textSize="25sp"
+    android:textStyle="bold"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/tv_question_ca_va"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Est ce que ca va ?"
+        app:layout_constraintTop_toBottomOf="@id/tv_titre"
+        android:layout_marginTop="50dp"
+        />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/reponse_ca_va"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/tv_question_ca_va"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_question_ca_va"
+        android:checked="true"
+        />
+
+    <TextView
+        android:id="@+id/question_bilboquet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quel est ton niveau en bilboquet ?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_question_ca_va"
+        android:layout_marginTop="50dp"
+        />
+
+    <SeekBar
+        android:id="@+id/sb_niveau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/question_bilboquet"
+        android:layout_margin="10dp"
+        android:progress="80"
+        />
+
+    <TextView
+        android:id="@+id/question_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Ton courriel ?"
+        app:layout_constraintTop_toBottomOf="@id/sb_niveau"
+        android:layout_marginTop="50dp"
+        />
+
+    <EditText
+        android:id="@+id/et_reponse_courriel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/question_mail"
+        android:inputType="textEmailAddress"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_percent="0.65"
+        android:orientation="horizontal"
+        />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        app:layout_constraintRight_toRightOf="@id/gl_v"
+        app:layout_constraintBottom_toBottomOf="@id/gl_h"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        app:layout_constraintLeft_toLeftOf="@id/gl_v"
+        app:layout_constraintBottom_toBottomOf="@id/gl_h"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        app:layout_constraintRight_toRightOf="@id/gl_v"
+        app:layout_constraintTop_toTopOf="@id/gl_h"
+        android:layout_margin="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        app:layout_constraintTop_toTopOf="@id/gl_h"
+        app:layout_constraintLeft_toLeftOf="@id/gl_v"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_blabla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_4"
+        android:text="XXXXXXXXXXXXXXXXXXXXXX"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
