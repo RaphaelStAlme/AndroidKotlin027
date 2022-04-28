@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/accueilFragment">
+
+    <fragment
+        android:id="@+id/accueilFragment"
+        android:name="fr.wololo.jetpacknavigation.AccueilFragment"
+        android:label="fragment_accueil"
+        tools:layout="@layout/fragment_accueil" >
+        <action
+            android:id="@+id/action_accueilFragment_to_bleuFragment"
+            app:destination="@id/bleuFragment" />
+        <action
+            android:id="@+id/action_accueilFragment_to_orangeFragment"
+            app:destination="@id/orangeFragment" />
+        <action
+            android:id="@+id/action_accueilFragment_to_rougeFragment"
+            app:destination="@id/rougeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bleuFragment"
+        android:name="fr.wololo.jetpacknavigation.BleuFragment"
+        android:label="fragment_bleu"
+        tools:layout="@layout/fragment_bleu" />
+    <fragment
+        android:id="@+id/orangeFragment"
+        android:name="fr.wololo.jetpacknavigation.OrangeFragment"
+        android:label="fragment_orange"
+        tools:layout="@layout/fragment_orange" />
+    <fragment
+        android:id="@+id/rougeFragment"
+        android:name="fr.wololo.jetpacknavigation.RougeFragment"
+        android:label="fragment_rouge"
+        tools:layout="@layout/fragment_rouge" />
+</navigation>
