@@ -3,6 +3,7 @@ package fr.wololo.roomwithjunitthegoodproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import fr.wololo.roomwithjunitthegoodproject.dao.InjectionDependance
 import fr.wololo.roomwithjunitthegoodproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         var db = ActivityMainBinding.inflate(layoutInflater)
 
-        var vm = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        var vm = ViewModelProvider(this,InjectionDependance(this)).get(MainActivityViewModel::class.java)
 
         db.model = vm
 
