@@ -1,10 +1,11 @@
 package fr.wololo.bestfinger
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel()
 {
-    var nbLance = 0;
+    var nbLance = MutableLiveData<Int>(0);
     var nbLanceGauche = 0;
     var nbLanceDroite = 0;
     var scoreGauche = 0;
@@ -13,7 +14,7 @@ class MainActivityViewModel : ViewModel()
 
     private fun lance():Int
     {
-        nbLance++
+        nbLance.value = nbLance.value?.plus(1)
         var valeur =  (1..6).random()
         img = when(valeur) {
             1 -> R.drawable.d1
