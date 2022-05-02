@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import fr.wololo.compteurdevoitureblanche.databinding.ActivityMainBinding
@@ -20,17 +21,10 @@ class MainActivity : AppCompatActivity() {
 
         var vm = ViewModelProvider(this).get(CompteurViewModel::class.java)
 
-        db.model = vm;
-
-        db.btnCompteur.setOnClickListener {
-            vm.clickPlusUn()
+        vm.compteur.observe(this, Observer {
             db.model = vm;
-        }
+        })
 
         setContentView(db.root)
     }
-
-
-
-
 }

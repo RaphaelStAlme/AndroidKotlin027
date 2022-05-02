@@ -31,6 +31,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:text="Plus un"
+        android:onClick="@{() -> Model.clickPlusUn()}"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

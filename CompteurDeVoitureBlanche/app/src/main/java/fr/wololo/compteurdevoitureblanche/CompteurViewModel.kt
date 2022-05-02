@@ -1,13 +1,15 @@
 package fr.wololo.compteurdevoitureblanche
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CompteurViewModel: ViewModel() {
 
-    var compteur = 0
+    var compteur:MutableLiveData<Int> = MutableLiveData(0);
 
     fun clickPlusUn()
     {
-        compteur++
+        compteur.value = compteur.value?.plus(1)
     }
 }
