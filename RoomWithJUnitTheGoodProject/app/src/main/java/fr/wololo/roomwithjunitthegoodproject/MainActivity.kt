@@ -2,6 +2,8 @@ package fr.wololo.roomwithjunitthegoodproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import fr.wololo.roomwithjunitthegoodproject.dao.InjectionDependance
 import fr.wololo.roomwithjunitthegoodproject.databinding.ActivityMainBinding
@@ -15,6 +17,13 @@ class MainActivity : AppCompatActivity() {
         var vm = ViewModelProvider(this,InjectionDependance(this)).get(MainActivityViewModel::class.java)
 
         db.model = vm
+
+        vm.listeFilms.observe(this, Observer {
+            for(item in it)
+            {
+                Log.i("ACOS","Film : $item")
+            }
+        })
 
         setContentView(db.root)
     }
