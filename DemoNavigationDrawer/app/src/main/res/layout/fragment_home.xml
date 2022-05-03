@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="Model"
+            type="fr.wololo.demonavigationdrawer.ui.home.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <EditText
+        android:id="@+id/et_ville"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Ville"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@={Model.item.ville}"
+        />
+
+    <RatingBar
+        android:id="@+id/rb_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/et_ville"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:numStars="5"
+        android:rating="@={Model.item.note}"
+        />
+
+    <Button
+        android:id="@+id/btn_enregistrer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rb_note"
+        android:text="SAve"
+        android:onClick="@{() -> Model.save()}"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
