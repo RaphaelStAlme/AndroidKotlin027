@@ -49,5 +49,12 @@
         android:text="Enregistrer"
         android:onClick="@{() -> Model.save()}"
         />
+    <Button
+        android:id="@+id/btn_afficher_film"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_enregistrer"
+        android:text="Afficher film"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

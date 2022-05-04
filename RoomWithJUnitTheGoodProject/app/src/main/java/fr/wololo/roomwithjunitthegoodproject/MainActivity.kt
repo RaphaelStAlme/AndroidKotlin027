@@ -1,5 +1,6 @@
 package fr.wololo.roomwithjunitthegoodproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -24,6 +25,12 @@ class MainActivity : AppCompatActivity() {
                 Log.i("ACOS","Film : $item")
             }
         })
+
+        db.btnAfficherFilm.setOnClickListener {
+            var intent = Intent(this,FilmsActivity::class.java)
+            startActivity(intent)
+        }
+
 
         setContentView(db.root)
     }

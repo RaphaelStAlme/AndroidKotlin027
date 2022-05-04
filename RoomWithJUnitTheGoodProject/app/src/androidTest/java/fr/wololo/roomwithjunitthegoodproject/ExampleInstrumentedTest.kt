@@ -46,12 +46,6 @@ class ExampleInstrumentedTest {
     }
 
     @Test
-    fun getAll()
-    {
-        assertTrue(dao.get().isNotEmpty());
-    }
-
-    @Test
     fun getById()
     {
         var film = dao.get(1)
