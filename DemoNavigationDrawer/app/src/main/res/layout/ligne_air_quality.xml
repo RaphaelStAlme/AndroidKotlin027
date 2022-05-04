@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="Model"
+            type="fr.wololo.demonavigationdrawer.AirQuality" />
+
+        <variable
+            name="Listener"
+            type="fr.wololo.demonavigationdrawer.ui.slideshow.ItemListener" />
+
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    android:background="#FFAB00"
+    android:onClick="@{() -> Listener.onClick(Model)}"
+    >
+
+    <TextView
+        android:id="@+id/tv_ville"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@{Model.ville}"
+        android:textColor="#2962FF"
+        />
+
+    <RatingBar
+        android:id="@+id/rb_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:rating="@{Model.note}"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
