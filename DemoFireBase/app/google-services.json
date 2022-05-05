@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "995297570143",
+    "project_id": "demofirebase-32f7e",
+    "storage_bucket": "demofirebase-32f7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995297570143:android:662f0fa00bce346f8b9aea",
+        "android_client_info": {
+          "package_name": "fr.wololo.demofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995297570143-n38u65sgqan5tsocne5hlbmjosgpa8hu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOMIH2OAW2giAXTtXw2u7lGUBl34v2Y7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995297570143-n38u65sgqan5tsocne5hlbmjosgpa8hu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
